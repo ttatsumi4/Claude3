@@ -451,3 +451,98 @@ h1 {
 .success-animation {
     animation: success 0.5s ease;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #game-container {
+        padding: 10px 15px 20px;
+    }
+
+    #header {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    #difficulty {
+        font-size: 0.9em;
+    }
+
+    #view-toggle {
+        margin-bottom: 15px;
+    }
+
+    #view-toggle button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .room-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .table-items {
+        grid-template-columns: 1fr;
+    }
+
+    .switches {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #inventory {
+        padding: 15px;
+    }
+
+    #inventory h3 {
+        font-size: 1.1em;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.1em;
+    }
+
+    #difficulty {
+        font-size: 0.85em;
+    }
+
+    #view-toggle button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .door {
+        padding: 40px 20px;
+        font-size: 1.2em;
+    }
+
+    .panel h3 {
+        font-size: 1.1em;
+    }
+
+    #panel-message {
+        font-size: 1em;
+    }
+}
