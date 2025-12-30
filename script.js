@@ -211,6 +211,7 @@ function initializeStudyTable() {
                     action: () => {
                         gameState.drawers.noHandleOpened = true;
                         document.getElementById('drawer-no-handle').classList.add('opened');
+                        addToInventory('UDUUUの紙');
                         showMessage('引き出しの中に「UDUUU」と書かれた紙がありました', 'success');
                         closeModal();
                     }
@@ -472,6 +473,9 @@ function showItemInfo(item) {
             break;
         case 'こすり出したメモ（613）':
             info = '南京錠のパスワード：613';
+            break;
+        case 'UDUUUの紙':
+            info = '「UDUUU」と書かれています<br><br>U=UP（上）、D=DOWN（下）<br>隠し金庫のスイッチのヒントです';
             break;
         default:
             info = item;
