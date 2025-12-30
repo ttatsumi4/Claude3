@@ -365,6 +365,15 @@ h1 {
     background: #764ba2;
 }
 
+/* Version Info */
+#version {
+    text-align: center;
+    color: #999;
+    font-size: 0.85em;
+    margin-top: 20px;
+    padding: 10px;
+}
+
 /* Modal */
 .modal {
     display: none;
@@ -516,6 +525,12 @@ h1 {
 
     .modal-content h2 {
         font-size: 1.3em;
+    }
+
+    #version {
+        font-size: 0.75em;
+        margin-top: 15px;
+        padding: 8px;
     }
 }
 
