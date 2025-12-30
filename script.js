@@ -340,6 +340,8 @@ function showPortableSafeModal() {
             setTimeout(() => {
                 showModalDialog('メモ右半分', '2231<br>ごさゅうい<br>んきち');
             }, 500);
+            // Check if both memos are collected
+            checkMemoCombination();
         } else {
             showMessage('パスワードが違います', 'error');
         }
