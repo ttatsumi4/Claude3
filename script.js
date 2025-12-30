@@ -536,20 +536,19 @@ function showModalDialog(title, content, buttons = null) {
 
 // Message Functions
 function showMessage(message, type = 'info') {
-    const messageBox = document.getElementById('message-box');
-    messageBox.textContent = message;
-    messageBox.className = 'show';
+    let title = '';
+    let icon = '';
 
     if (type === 'error') {
-        messageBox.classList.add('error');
+        title = 'エラー';
+        icon = '❌';
     } else if (type === 'success') {
-        messageBox.classList.remove('error');
-        messageBox.classList.remove('info');
+        title = '成功';
+        icon = '✅';
     } else {
-        messageBox.classList.add('info');
+        title = 'お知らせ';
+        icon = 'ℹ️';
     }
 
-    setTimeout(() => {
-        messageBox.classList.remove('show');
-    }, 3000);
+    showModalDialog(`${icon} ${title}`, message);
 }

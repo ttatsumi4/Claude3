@@ -365,36 +365,6 @@ h1 {
     background: #764ba2;
 }
 
-/* Message Box */
-#message-box {
-    margin: 0 0 20px 0;
-    padding: 15px;
-    background: #d4edda;
-    border: 2px solid #28a745;
-    border-radius: 8px;
-    color: #155724;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-align: center;
-    display: none;
-}
-
-#message-box.show {
-    display: block;
-}
-
-#message-box.error {
-    background: #f8d7da;
-    border-color: #dc3545;
-    color: #721c24;
-}
-
-#message-box.info {
-    background: #d1ecf1;
-    border-color: #17a2b8;
-    color: #0c5460;
-}
-
 /* Modal */
 .modal {
     display: none;
