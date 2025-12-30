@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脱出ゲーム - Ⅰの部屋（難易度★☆☆☆☆）</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>脱出ゲーム - Ⅰの部屋</h1>
+        <div id="difficulty">難易度★☆☆☆☆</div>
+
+        <!-- View Toggle -->
+        <div id="view-toggle">
+            <button id="front-view-btn" class="active">正面</button>
+            <button id="back-view-btn">背面</button>
+        </div>
+
+        <!-- Front View -->
+        <div id="front-view" class="view active">
+            <div class="room-container">
+                <div id="exit-door" class="clickable">
+                    <div class="door-frame">
+                        <div class="door" id="door-element">出口のドア</div>
+                    </div>
+                </div>
+                <div id="lock-panel" class="clickable">
+                    <div class="panel">
+                        <h3>ロック解除パネル</h3>
+                        <div id="panel-message">クリックして操作</div>
+                        <div id="card-slot" class="hidden">
+                            <button id="insert-card-btn" class="hidden">カードキーを挿入</button>
+                        </div>
+                        <div id="password-input" class="hidden">
+                            <input type="text" id="password-field" maxlength="4" placeholder="4桁のパスワード">
+                            <button id="submit-password-btn">送信</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back View -->
+        <div id="back-view" class="view">
+            <div class="room-container">
+                <!-- Wall Picture -->
+                <div id="wall-picture" class="clickable">
+                    <div class="picture-frame">手提げ金庫の絵</div>
+                </div>
+
+                <!-- Study Table -->
+                <div id="study-table" class="clickable">
+                    <div class="table">
+                        <h3>書斎テーブル</h3>
+                        <div class="table-items">
+                            <div id="portable-safe" class="table-item clickable">手提げ金庫</div>
+                            <div id="locker-key-item" class="table-item clickable">ロッカーの鍵</div>
+                            <div id="pencil-item" class="table-item clickable">エンピツ</div>
+                            <div id="blank-memo-item" class="table-item clickable">白紙のメモ</div>
+                        </div>
+                        <div class="drawers">
+                            <div id="drawer-no-handle" class="drawer clickable">
+                                <span>取手なし引き出し</span>
+                            </div>
+                            <div id="drawer-with-lock" class="drawer clickable">
+                                <span>南京錠付き引き出し</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Locker -->
+                <div id="locker" class="clickable">
+                    <div class="locker-container">
+                        <h3>ロッカー</h3>
+                        <div id="locker-door-free" class="locker-door clickable">扉1（フリー）</div>
+                        <div id="locker-door-locked" class="locker-door clickable">扉2（鍵付き）</div>
+                    </div>
+                </div>
+
+                <!-- Hidden Safe -->
+                <div id="hidden-safe" class="clickable">
+                    <div class="safe-container">
+                        <h3>隠し金庫</h3>
+                        <div class="switches">
+                            <div class="switch" data-index="0">
+                                <button class="switch-up">↑</button>
+                                <span class="switch-state">-</span>
+                                <button class="switch-down">↓</button>
+                            </div>
+                            <div class="switch" data-index="1">
+                                <button class="switch-up">↑</button>
+                                <span class="switch-state">-</span>
+                                <button class="switch-down">↓</button>
+                            </div>
+                            <div class="switch" data-index="2">
+                                <button class="switch-up">↑</button>
+                                <span class="switch-state">-</span>
+                                <button class="switch-down">↓</button>
+                            </div>
+                            <div class="switch" data-index="3">
+                                <button class="switch-up">↑</button>
+                                <span class="switch-state">-</span>
+                                <button class="switch-down">↓</button>
+                            </div>
+                            <div class="switch" data-index="4">
+                                <button class="switch-up">↑</button>
+                                <span class="switch-state">-</span>
+                                <button class="switch-down">↓</button>
+                            </div>
+                        </div>
+                        <button id="safe-enter-btn">ENTER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inventory -->
+        <div id="inventory">
+            <h3>所持品</h3>
+            <div id="inventory-items"></div>
+        </div>
+
+        <!-- Message Box -->
+        <div id="message-box"></div>
+
+        <!-- Modal for detailed interactions -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
